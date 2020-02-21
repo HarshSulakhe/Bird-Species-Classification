@@ -28,7 +28,7 @@ ap.add_argument("-p", "--plot", type=str, default="plot.png",
 args = vars(ap.parse_args())
 
 
-EPOCHS = 2
+EPOCHS = 1
 INIT_LR = 1e-3
 BS = 32
 IMAGE_DIMS = (112, 112, 3)
