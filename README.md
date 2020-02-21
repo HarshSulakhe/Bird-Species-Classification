@@ -21,7 +21,7 @@ cd Bird-Species-Classification
 
 Run the following command
 ```
-python train.py --dataset <insert image folder name here> --model BirdModel --labelbin mlb.pickle
+python train.py --dataset <insert image folder name here> --model bird.model --labelbin mlb.pickle
 ```
 
 Training will take time if you do not have a CUDA enabled GPU
@@ -29,5 +29,3 @@ Training will take time if you do not have a CUDA enabled GPU
 ## To Do
 - [ ] Implement the same model in PyTorch
 - [ ] Update ReadMe with plots of accuracy and the final confusion matrix
-
-
