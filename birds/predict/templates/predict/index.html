@@ -1,0 +1,12 @@
+{%load staticfiles%}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'predict/index.css'%}">
+<script src = "{% static 'predict/index.js'%}"> </script>
+<form method="post" enctype="multipart/form-data" action = "{% url 'predict:result'%}">
+    {%csrf_token%}
+    <!-- <label for="apply"><input type="file" name="" id="apply" accept="image/*,.pdf">Upload image of a bird here</label> -->
+    <!-- <input type="file" id="img" name="img" accept="image/*">
+    <input type = "submit" value = "result">        -->
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <input type="submit">
+</form>
