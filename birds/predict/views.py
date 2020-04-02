@@ -6,7 +6,7 @@ from fastai.vision import *
 
 
 bs = 64
-path = "/home/harsh/SOP"
+path = "/home/vishal/Documents/Bird-Species-Classification"
 path_img = path+'/images'
 from pathlib import Path
 p = Path(path_img)
@@ -30,7 +30,7 @@ def index(request):
 def result(request):
     pass
     img = request.FILES['img']
-    learn.load('/home/harsh/SOP/models/birds-stage-1-50-unfrozen')
+    learn.load('/home/vishal/Documents/Bird-Species-Classification/birds-stage-1-50-unfrozen')
     im = open_image(img)
     for i in range(len(tfms)):
         im.apply_tfms(tfms[i])
