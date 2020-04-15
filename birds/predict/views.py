@@ -5,19 +5,10 @@ from fastai import *
 from fastai.vision import *
 
 
-bs = 64
-path = "/home/vishal/Documents/Bird-Species-Classification"
-path_img = path+'/images'
-from pathlib import Path
-p = Path(path_img)
-dirs = [x for x in p.iterdir() if x.is_dir()]
-fnames = [get_image_files(y) for y in dirs]
-fnames = [item for sublist in fnames for item in sublist]
-np.random.seed(2)
-pat = r'/([^/]+)_\d+_\d+.jpg$'
-data = ImageDataBunch.from_name_re(path_img, fnames, pat, ds_tfms=get_transforms(), size=320, bs=bs//4)
-data.normalize(imagenet_stats)
-learn = cnn_learner(data, models.resnet50, metrics = error_rate)
+
+path = "/home/harsh/SOP/fastai-model"
+
+learn = load_learner(path,'birds.pkl')
 learn.precompute = False
 tfms = get_transforms()
 # Create your views here.
@@ -30,7 +21,7 @@ def index(request):
 def result(request):
     pass
     img = request.FILES['img']
-    learn.load('/home/vishal/Documents/Bird-Species-Classification/birds-stage-1-50-unfrozen')
+    learn.load('/home/harsh/SOP/models/birds-stage-1-50-unfrozen')
     im = open_image(img)
     for i in range(len(tfms)):
         im.apply_tfms(tfms[i])
