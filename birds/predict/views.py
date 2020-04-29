@@ -6,9 +6,9 @@ from fastai.vision import *
 
 
 
-path = "/home/harsh/SOP/fastai-model"
+path = "/home/harsh/SOP/fastai-model/PILANI_BIRDS"
 
-learn = load_learner(path,'birds.pkl')
+learn = load_learner(path,'birdsofpilani.pkl')
 learn.precompute = False
 tfms = get_transforms()
 # Create your views here.
@@ -21,7 +21,7 @@ def index(request):
 def result(request):
     pass
     img = request.FILES['img']
-    learn.load('/home/harsh/SOP/models/birds-stage-1-50-unfrozen')
+    # learn.load('/home/harsh/SOP/models/birds-stage-1-50-unfrozen')
     im = open_image(img)
     for i in range(len(tfms)):
         im.apply_tfms(tfms[i])
