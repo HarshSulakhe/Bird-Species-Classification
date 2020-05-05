@@ -25,7 +25,3 @@ Run the following command
 python manage.py runserver
 ```
 
-
-## To Do
-- [ ] Implement the same model in PyTorch
-- [ ] Update ReadMe with plots of accuracy and the final confusion matrix
