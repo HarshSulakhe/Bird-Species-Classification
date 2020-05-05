@@ -1,11 +1,12 @@
 # Bird-Species-Classification
 A deep learning approach to classify bird species through multi-class classification on images.
 
-Dataset Used - [Caltech-UCSD Birds-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)
+Dataset Used - [Caltech-UCSD Birds-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) for initial pilot run.
+Once the model architecture (pre-trained ResNet50) was tested, a new custom dataset was curated consisting of birds specific to Pilani (BITS Pilani, Pilani Campus)
 
 Dependencies:
-* Tensorflow 2.0.0
-* Keras 2.3.1
+* Django 2.2
+* fastai 1.0.61
 * Python 3.7.6
 
 
@@ -16,15 +17,14 @@ git clone https://github.com/HarshSulakhe/Bird-Species-Classification.git
 
 Shift to the cloned directory
 ```
-cd Bird-Species-Classification
+cd Bird-Species-Classification/birds
 ```
 
 Run the following command
 ```
-python train.py --dataset <insert image folder name here> --model bird.model --labelbin mlb.pickle
+python manage.py runserver
 ```
 
-Training will take time if you do not have a CUDA enabled GPU
 
 ## To Do
 - [ ] Implement the same model in PyTorch
