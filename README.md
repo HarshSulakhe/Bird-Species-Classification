@@ -40,6 +40,11 @@ We built a web platform where a user can upload an image of a bird and submit it
 
 ![Web_App](./Images/Web_App.PNG?raw=true "Web_App")
 
+## Accuracy
+
+* Caltech-UCSD Birds-200-2011 Dataset: `81.54%`
+* Dataset specific to the Pilani region: `87%`
+
 ## Dependencies:
 
 * Django 2.2
