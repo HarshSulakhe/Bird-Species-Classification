@@ -4,7 +4,7 @@ A deep learning approach to classify bird species through multi-class classifica
 
 ## Objective
 
-To design a simple system that identifies the type of bird species in an image that a user uploads. This would make it easier for a person to identify and understand the rich variety of species within the BITS Pilani campus. We implement a transfer learning approach that achieves the same. 
+To design a simple system that identifies the type of bird species in an image that a user uploads. This would make it easier for a person to identify and understand the rich variety of species within the BITS Pilani campus. We implemented a transfer learning approach that achieves the same. 
 
 ## Dataset
 
